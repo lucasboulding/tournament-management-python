@@ -2,7 +2,7 @@
 
 ## Preamble
 
-I am a hobbyist programmer (in Python thus far), and so I am building this project in Python to accompany or illustrate or think through how I am trying to implement it in Racket (which I am trying to learn). After I hit a significant roadblock in making progress on the Racket version, I am putting together a Python version to think about the problems and how I would resolve them in Python. 
+I am a hobbyist programmer (in Python thus far), and so I am building this project in Python to accompany or illustrate or think through [how I am trying to implement it in Racket](https://github.com/lucasboulding/tournament-management-racket) (which I am trying to learn). After I hit a significant roadblock in making progress on the Racket version, I am putting together a Python version to think about the problems and how I would resolve them in Python in the hope that this will help to clarify my way forward in Racket. 
 
 
 What I would like to make is a suite of simple tournament management tools. First I would build them to run through the command line, and then (maybe) through a GUI. There are two tools I would like to focus on: an Elo ratings system, and a Swiss tournament manager (using Monrad pairing). I have decided to develop both simultaneously because the Swiss-Monrad system depends on ratings for sustained use. 

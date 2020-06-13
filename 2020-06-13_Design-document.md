@@ -17,7 +17,10 @@ What I want to try to do here is to create a piece of software that I could use 
 This, it seems to me, is what constitutes the definition of a friendly tournament, one where the majority of participants get to play the game they like, get good matches in, improve through practice, and determine where they fall within the group. In this tournament, everyone stands to gain by playing.
 
 
-This whole thing is a learning exercise. Firstly, I should aim to get them to run from DrRacket. Then maybe a command line utility, and then (maybe) a GUI to run it. That would be great. There are two tools I would like to focus on: an Elo ratings system, and a Swiss tournament manager (using Monrad pairing). I could try to make the tools "game agnostic", but one of the aims of this exercise is to learn to make a tailored system that responds to the eccentrities of a given game. To that end, I will be picking traditional pub card game Cribbage for the purposes of this project (specifically [six card cribbage](https://www.pagat.com/adders/crib6.html) for two players). It's a low-stakes game, and as far as I am aware there isn't a dedicated tournament solution available. It also has some unusual scoring features ("skunking") which could be used to make the Elo rating system more interesting. 
+This whole thing is a learning exercise. I am creating this Python version of the project to help me to progress with the Racket version — learning Racket is the primary aim. 
+
+
+There are two tools I would like to focus on: an Elo ratings system, and a Swiss tournament manager (using Monrad pairing). I could try to make the tools "game agnostic", but one of the aims of this exercise is to learn to make a tailored system that responds to the eccentrities of a given game. To that end, I will be picking traditional pub card game Cribbage for the purposes of this project (specifically [six card cribbage](https://www.pagat.com/adders/crib6.html) for two players). It's a low-stakes game, and as far as I am aware there isn't a dedicated tournament solution available. It also has some unusual scoring features ("skunking" or "lurching") which could be used to make the Elo rating system more interesting. 
 
 
 
