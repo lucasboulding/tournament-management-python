@@ -1,6 +1,6 @@
 
 
-## Quick script to calcultae Elo ratings of two players, using "logistic curve", like USCF
+## Quick script to calculate Elo ratings of two players, using "logistic curve", like USCF
 
 
 ## Design notes: ** = to the power of
