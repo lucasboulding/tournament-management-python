@@ -11,6 +11,7 @@ class Player():
         self.current_rating = current_rating
         self.seed = 0
         self.played = []
+        self.score = 0
         self.bye = False
         #self.enrolment_date =
         #self.tournaments_played = []

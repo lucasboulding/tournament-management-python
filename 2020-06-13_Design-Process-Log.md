@@ -21,6 +21,41 @@ Terms:
 # Log
 
 
+## 2020-08-31
+
+Wrote update score function; takes user input on whether player x beat player y to determine the score for player x and y.
+
+Wrote the second round function, which is based on the sort stability trait described in the Python documentation. Went through three different sort approaches before arriving at this solution; see below:
+
+
+```python
+#This is from the O'Reilly Python Cookbook
+ round_list = sorted(list_of_players, key=lambda x,y: (
+cmp(player(x).score, player(y).score or  # Sort by score
+cmp(player(x).seed, player(y).seed)))) # sort by seed
+ print(round_list)
+### This didn't work
+
+aux_list = map(lambda x: (x, sorting_criterion_score(x),  sorting_criterion_seed(x)), list_of_players)
+aux_list.sort(lambda x,y:
+cmp(x[1], y[1]) or
+cmp(x[2], y[2]))
+round_list = map(lambda x: x[0], aux_list)
+for player in round_list:
+   print(player.name)
+### This didn't work
+
+list_of_players.sort(key = lambda player: (player.score, player.seed))
+### This completes most of the sorting correctly, in that it divides in two and ranks by seed, but it sorts 0 points above 1 point, so need to rank the score descending. According to the writeup here (http://www.lleess.com/2013/08/python-sort-list-by-multiple-attributes.html) the only way to get the score to sort descending is to use a cmp function.
+
+round_list = multi_sort(list_of_players, (('score', True), ('seed', True)))
+```
+
+The current outstanding issue is in the pairing logic for later rounds; it only asks about odd numbered players, not about the complete set of games. Not the pairing logic in fact, but the score updating logic. 
+
+
+
+
 ## 2020-08-30
 
 This process is beset by confusion. Lack of clear specification is hampering my attempt, and lack of progress in the attempt is impinging on my motivation. So a different approach is necessary. Instead of worrying about all the IO, I'm just going to focus on learning the necessary logic to make basic steps. The first step of a Monrad-Swiss tournament is getting people through the door, taking their Elo ratings and sorting them. So I'll work out how to take a list of Elo ratings and sort it.
@@ -29,7 +64,7 @@ Started using a simple dictionary, sorted it. Then started using the Player clas
 
 Set initial seeding, using the beginner's increment.
 
-Now need to print initial match ups; given the sorting above, the pairing will always be the same. 
+Now need to print initial match ups; given the sorting above, the pairing will always be the same.
 
 
 
