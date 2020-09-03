@@ -111,14 +111,18 @@ for player in sorted_players:
     seed_rank += 1
 
 # Print out first round matches and note who has played / got a bye
+
+
 round_one(sorted_players)
 
 update_results(sorted_players)
+
 
 r2 = round_two(sorted_players)
 
 for player in r2:
     print(player.name)
+    print(player.played)
 
 ## TODO - the current issue is in this section somewhere; the following update_results seems to skip a round. If all odds win in the first round, then Timmy Whippet's second round should be against Waxy Pomelo. This is determined correctly, but when it requests input for the scores updating the prompt puts Timmy Whippet against seed 5 Griselda Nib. The next score it requests is Griselda Nib versus seed 13 Functional Glibro.
 
